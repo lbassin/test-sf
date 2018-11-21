@@ -15,6 +15,7 @@ services:
         image: 'composer:latest'
         volumes:
             - './:/app'
+        command: "install"
     phpunit:
         build: docker/phpunit
         volumes:
