@@ -15,14 +15,7 @@ services:
         image: 'composer:latest'
         volumes:
             - './:/app'
-    mariadb:
-        image: 'mariadb:10.3'
-        ports:
-            - '3306:3306'
+    phpunit:
+        build: docker/phpunit
         volumes:
-            - './docker/database:/var/lib/mysql'
-        environment:
-            - MYSQL_DATABASE=docker
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=password
-            - MYSQL_RANDOM_ROOT_PASSWORD=yes
+            - './:/app'
