@@ -14,7 +14,7 @@ class SAS implements Taxable
     private $address;
 
     /** @var float */
-    private $taxPercentage;
+    private $taxPercentage = 25;
 
     public function getTaxPercentage(): float
     {

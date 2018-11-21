@@ -12,6 +12,6 @@ class Tax
             throw new \LogicException('Annual earning has to be greater than 0');
         }
 
-        return $annualEarnings * $taxable->getTaxPercentage();
+        return $annualEarnings * ($taxable->getTaxPercentage() / 100);
     }
 }

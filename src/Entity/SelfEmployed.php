@@ -11,7 +11,7 @@ class SelfEmployed implements Taxable
     private $name;
 
     /** @var float */
-    private $taxPercentage;
+    private $taxPercentage = 33;
 
     public function getTaxPercentage(): float
     {
