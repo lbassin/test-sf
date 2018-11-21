@@ -11,6 +11,15 @@ services:
             - '8080:80'
         volumes:
             - './:/usr/share/nginx/html'
+    mariadb:
+        image: 'mariadb:10.3'
+        ports:
+            - '3306:3306'
+        environment:
+            - MYSQL_DATABASE=${DB_NAME}
+            - MYSQL_USER=${DB_USER}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_RANDOM_ROOT_PASSWORD=yes
     composer:
         image: 'composer:latest'
         volumes:
